@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require("express")
 const app = express()
 const cors = require('cors')
-const phonePersons = require('./modules/mongoose.js')
+const phonePersons = require('/modules/mongoose.js')
 
 app.use(express.static('build'))
 app.use(cors())
@@ -26,7 +26,6 @@ app.post('/api/persons', (request, response) => {
   const person = new phonePersons ({
     name: body.name,
     number: body.number,
-    required: true
   })
 
   person.save().then(savedPerson => {
