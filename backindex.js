@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require("express")
 const app = express()
 const cors = require('cors')
-const phonePersons = require('./modules/mongoose')
+const phonePersons = require('/modules/mongoose.js')
 
 app.use(express.static('build'))
 app.use(cors())
